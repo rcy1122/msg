@@ -1,0 +1,15 @@
+broker:
+  address: "127.0.0.1:17000"
+
+producer:
+  server: "127.0.0.1:17000"
+  topic: "Apple"
+
+consumer:
+  server: "127.0.0.1:17000"
+  topic: "Apple"
+  name: "tom"
+
+log:
+  level: debug
+
