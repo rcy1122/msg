@@ -65,7 +65,7 @@ func (b *Broker) Subscribe(stream broker.Broker_SubscribeServer) error {
 	if err != nil {
 		return errors.WithMessage(err, "receive subscribe")
 	}
-	log.FromContext(b.ctx).Infof("'%s' started subscribing to '%s'", in.Name, in.Topic)
+	log.FromContext(b.ctx).Infof("'%s' started subscribing to topic '%s'", in.Name, in.Topic)
 	if err := b.doSubscribe(in.Topic, in.Id, in.Name, stream); err != nil {
 		return errors.WithMessage(err, "subscribe")
 	}
