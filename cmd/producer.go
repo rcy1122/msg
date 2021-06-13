@@ -98,7 +98,7 @@ func runProducer() error {
 	for {
 		select {
 		case <-ctx.Done():
-			log.FromContext(ctx).Info("producer had stopped")
+			log.FromContext(ctx).Info("producer has stopped")
 			time.Sleep(10 * time.Millisecond)
 			return nil
 		}
